@@ -9,7 +9,7 @@ public class OrbGenerate : MonoBehaviour
     public int orbLoc;
     public int orbCol;
     public float xPos;
-   
+      
     
     void Update()
     {

@@ -8,14 +8,14 @@ public class ScoreUpdater : MonoBehaviour
 {
 
     public GameObject scoreDisplay;
-    void Start()
+    public static int orbScore;
+
+
+    void Update()
     {
-        scoreDisplay.GetComponent<TextMeshProUGUI>().text = "Score: 100";
+        scoreDisplay.GetComponent<TextMeshProUGUI>().text = ""+ orbScore;
     }
 
    
-    void Update()
-    {
-        
-    }
+   
 }
