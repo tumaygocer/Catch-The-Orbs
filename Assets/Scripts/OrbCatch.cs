@@ -12,17 +12,20 @@ public class OrbCatch : MonoBehaviour
 
         if (other.tag == "GreenOrb")
         {
-            ScoreUpdater.orbScore = 1;
+            ScoreUpdater.orbScore += 1;
         }
 
         if (other.tag == "RedOrb")
         {
-            ScoreUpdater.orbScore = 2;
+            ScoreUpdater.orbScore += 2;
         }
 
         if (other.tag == "BlueOrb")
         {
-            ScoreUpdater.orbScore = 3;
+            ScoreUpdater.orbScore += 3;
         }
+
+        ScoreUpdater.orbCount += 1;
+        other.gameObject.SetActive(false);
     }
 }
