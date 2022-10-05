@@ -15,8 +15,8 @@ public class ScoreUpdater : MonoBehaviour
 
     void Update()
     {
-        scoreDisplay.GetComponent<TextMeshProUGUI>().text = "SCORE:" + orbScore;
-        orbDisplay.GetComponent<TextMeshProUGUI>().text = "ORBS:" + orbCount;
+        scoreDisplay.GetComponent<TextMeshProUGUI>().text = "SCORE: " + orbScore;
+        orbDisplay.GetComponent<TextMeshProUGUI>().text = "ORBS: " + orbCount;
     }
 
    
