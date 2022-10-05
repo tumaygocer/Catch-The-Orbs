@@ -31,15 +31,16 @@ public class Begins : MonoBehaviour
 
     public void TapToStart()
     {
-        tapButton.SetActive(false);
+        tapButton.SetActive(true);
         menuText.SetActive(false);
-        splashBackround.GetComponent<Animation>().Play("SplashBackround");
+        splashBackround.GetComponent<Animator>().Play("SplashBackround");
         StartCoroutine(BeginTheGame());
     }
 
     IEnumerator BeginTheGame()
     {
-        yield return new WaitForSeconds(1);
+        tapButton.SetActive(false);
+        yield return new WaitForSeconds(1);        
         countdownText.SetActive(true);
         yield return new WaitForSeconds(1);
         countdownText.GetComponent<TextMeshProUGUI>().text = "2";
@@ -48,6 +49,7 @@ public class Begins : MonoBehaviour
         countdownText.SetActive(false);
         countdownText.GetComponent<TextMeshProUGUI>().text = "3";
         bgm.SetActive(true);
+        splashBackround.SetActive(false);
         gameControl.GetComponent<Timer>().enabled = true;
         gameControl.GetComponent<OrbGenerate>().enabled = true;
     }
