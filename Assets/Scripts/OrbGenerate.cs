@@ -9,8 +9,11 @@ public class OrbGenerate : MonoBehaviour
     public int orbLoc;
     public int orbCol;
     public float xPos;
-      
-    
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
         if (genOrb == false)
