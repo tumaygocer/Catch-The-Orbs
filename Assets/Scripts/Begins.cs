@@ -47,6 +47,7 @@ public class Begins : MonoBehaviour
         countdownText.GetComponent<TextMeshProUGUI>().text = "2";
         yield return new WaitForSeconds(1);
         countdownText.GetComponent<TextMeshProUGUI>().text = "1";
+        yield return new WaitForSeconds(1);
         countdownText.SetActive(false);
         countdownText.GetComponent<TextMeshProUGUI>().text = "3";
         bgm.SetActive(true);
