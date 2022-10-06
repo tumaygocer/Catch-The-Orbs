@@ -16,8 +16,9 @@ public class Begins : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartupGame());
+        StartCoroutine(StartupGame());       
     }
+
 
     IEnumerator StartupGame()
     {
