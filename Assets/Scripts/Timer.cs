@@ -15,10 +15,15 @@ public class Timer : MonoBehaviour
     public GameObject gameControlTimer;
     public GameObject finalScore;
     public GameObject finalOrbs;
+  
+    
 
     public void PlayAgain()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ScoreUpdater.orbCount = 0;
+        ScoreUpdater.orbScore = 0;
     }  
     
     public void Quit()
@@ -44,7 +49,10 @@ public class Timer : MonoBehaviour
             gameControlTimer.GetComponent<OrbGenerate>().enabled = false;
             finalScore.GetComponent<TextMeshProUGUI>().text = "SCORE: " + ScoreUpdater.orbScore;
             finalOrbs.GetComponent<TextMeshProUGUI>().text = "ORBS: " + ScoreUpdater.orbCount;
+           
         }
+        
+
     }
 
     IEnumerator SubtractSecond()
