@@ -52,7 +52,6 @@ public class Timer : MonoBehaviour
            
         }
         
-
     }
 
     IEnumerator SubtractSecond()
